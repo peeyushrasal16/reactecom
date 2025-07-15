@@ -1,0 +1,21 @@
+#footer-parent{
+    background-color: black;
+    color: #ffffff;
+    width: 100vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 8vh;
+    display: flex;
+    position: sticky;
+    bottom: 0px;
+    flex-direction: row;
+}
+.footer-child{
+    display: flex;
+}
+.footer-child li{
+    list-style: none;
+    display: flex;
+    font-weight: bolder;
+}
