@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-function Products() {
+function Products({link,...data}) {
   let count = 0;
-  fetch("http://127.0.0.1:5500/dummy/data.json")
-    .then((res) => res.json())
-    .then((data) => {
-      setProducts(data);
-      count++;
-      console.log(count);
-      return data;
-    })
   let [products, setProducts] = useState({products:[]});
-  
+  useEffect(() => {
+    fetch(link)
+      .then((res) => res.json())
+      .then((data) => {
+        setProducts(data);
+        count++;
+        console.log(count);
+        return data;
+      })
+  },[])
   return (
     <>
       {Math.random()}
@@ -19,7 +20,7 @@ function Products() {
         {products.products.map((value,index) => {
           return (
               <div key={index} className="card text-start">
-                <img className="card-img-top" src={value.images[0]} alt="Title" height={100} />
+                <img className="card-img-top" src={value.images[0]} alt="Title" height={300} />
                 <div className="card-body">
                   <h4 className="card-title">{value.title}</h4>
                   <p className="card-text">{value.description}</p>
