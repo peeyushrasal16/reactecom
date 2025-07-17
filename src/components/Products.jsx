@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 function Products({link,...data}) {
   let count = 0;
+  let { categoryName } = useParams();
   let [products, setProducts] = useState({products:[]});
   useEffect(() => {
+    link = categoryName ? link + categoryName  : link
     fetch(link)
       .then((res) => res.json())
       .then((data) => {
