@@ -26,21 +26,21 @@ function App() {
       ],
     },
     {
-      path: "/products/phone",
+      path: "/products/category/smartphones",
       element: (
         <>
           <NavBar />
-          <Products link="https://dummyjson.com/products/search?q=phone" />
+          <Products link="https://dummyjson.com/products/category/smartphones" />
           <Footer />
         </>
       ),
     },
     {
-      path: "/products/fragrances",
+      path: "products/category/fragrances",
       element: (
         <>
           <NavBar />
-          <Products link="https://dummyjson.com/products/search?q=fragrances" />
+          <Products link="https://dummyjson.com/products/category/fragrances" />
           <Footer />
         </>
       ),
