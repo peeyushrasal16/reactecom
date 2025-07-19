@@ -24,7 +24,7 @@ function Products({link,...data}) {
       <div style={loadingBodyStyle}>
         <div
           class="spinner-border"
-          style={{ height: "20vh", width: "20vh" }}
+          style={{ height: "20vh", width: "20vh",borderTop:"10px solid red",borderLeft:"10px solid blue",borderBottom:"10px solid green" }}
            role="status"
         >
           <span

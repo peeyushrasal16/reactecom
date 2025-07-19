@@ -5,6 +5,7 @@ import Products from './components/Products';
 import { createBrowserRouter, Link, Outlet, RouterProvider } from 'react-router-dom';
 import About from './components/About';
 import ProductCategory from './components/ProductCategory';
+import Register from './components/Register';
 function App() {
   let router = createBrowserRouter([
     {
@@ -12,9 +13,7 @@ function App() {
       element: (
         <>
           <NavBar />
-          <h1>Hello world</h1>
           <Link to={"product-category"}>Product Category</Link>
-          <Outlet />
           <Footer />
         </>
       ),
@@ -22,6 +21,14 @@ function App() {
         {
           path: "product-category",
           element: <ProductCategory />,
+        },
+        {
+          path: "user",
+          element: <h1>Hello User Profile Page</h1>,
+        },
+        {
+          path: "register",
+          element: <Register />
         },
       ],
     },
