@@ -6,6 +6,8 @@ import { createBrowserRouter, Link, Outlet, RouterProvider } from 'react-router-
 import About from './components/About';
 import ProductCategory from './components/ProductCategory';
 import Register from './components/Register';
+import Counter from './components/Counter';
+import CounterNew from './components/CounterNew';
 function App() {
   let router = createBrowserRouter([
     {
@@ -28,7 +30,7 @@ function App() {
         },
         {
           path: "register",
-          element: <Register />
+          element: <Register />,
         },
       ],
     },
@@ -48,6 +50,36 @@ function App() {
         <>
           <NavBar />
           <Products link="https://dummyjson.com/products/category/" />
+          <Footer />
+        </>
+      ),
+    },
+    {
+      path: "/counter",
+      element: (
+        <>
+          <NavBar />
+          <Counter />
+          <Footer />
+        </>
+      ),
+    },
+    {
+      path: "/CounterNew",
+      element: (
+        <>
+          <NavBar />
+          <CounterNew />
+          <Footer />
+        </>
+      ),
+    },
+    {
+      path: "/memo",
+      element: (
+        <>
+          <NavBar />
+          <UseOfMemo />
           <Footer />
         </>
       ),

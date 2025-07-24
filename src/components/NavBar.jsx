@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, NavLink, Outlet } from 'react-router-dom';
-
+import { userDataContext } from '../context/UserContext';
 function NavBar() {
   return (
     <>
@@ -31,6 +31,11 @@ function NavBar() {
               <li className="nav-item">
                 <NavLink className="nav-link" to="/products">
                   Products
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/counter">
+                  Counter
                 </NavLink>
               </li>
               <li className="nav-item dropdown">
