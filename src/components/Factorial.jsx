@@ -10,7 +10,7 @@ function Factorial() {
             <div className="counter-child">
                 <input type="number" onChange={()=> {
 
-                }}>
+                }} />
             </div>
         </div>
     </div>
