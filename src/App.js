@@ -79,7 +79,7 @@ function App() {
       element: (
         <>
           <NavBar />
-          <UseOfMemo />
+        
           <Footer />
         </>
       ),
